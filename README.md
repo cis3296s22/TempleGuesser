@@ -8,7 +8,7 @@ Prerequisites:
 - VSCode version 1.63 or earlier
 - XAMPP Local Server Handling Installer
 
-Instructions:
+# Instructions:
 ## Part 1
 - Install XAMPP with default settings and configure
 - Test to see if ```localhost``` works in browser
