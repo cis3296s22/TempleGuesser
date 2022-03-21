@@ -7,6 +7,7 @@ Prerequisites:
 - Google Maps API key
 - VSCode version 1.63 or earlier
 - XAMPP Local Server Handling Installer
+- Trello Board: https://trello.com/b/Nkg3W5V1/templeguesser
 
 # Instructions:
 ## Part 1
