@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>TempleGuesser</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/googlemap.js"></script>
-	<style type="text/css">
-		.container {
-			height: 450px;
-		}
-		#map {
-			width: 100%;
-			height: 100%;
-			border: 1px solid blue;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<center><h1>TempleGuesser</h1></center>
-		<div id="map"></div>
-	</div>
-</body>
-<script async defer
-        src="https://maps.googleapis.com/map/api/
-        js?key={AIzaSyDYbxmU3Fi8CDGkAU5dmfQT0_kBvzkMWlI}&callback=initMap">
-        </script>
+<html>
+  <head>
+    <title>TempleGuesser</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./googlemaps.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYbxmU3Fi8CDGkAU5dmfQT0_kBvzkMWlI&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
 </html>
