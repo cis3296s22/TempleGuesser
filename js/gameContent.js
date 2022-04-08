@@ -11,7 +11,7 @@ var content = `
                 background-color: #edd5d5;
             }
             .flexContainer .item {
-                width: 100%; /* to fit two columns inside the flexContainer */
+                width: 100%;
                 box-sizing: border-box; /* makes padding and border counted in the width */
             }
         </style>
@@ -28,7 +28,7 @@ var content = `
         ele.appendChild(gameDiv);
         
         // CREATE ITEM 1
-        var game = MakeGame(serc.jpeg);
+        var game = MakeGame("pics/serc.jpeg");
         gameDiv.appendChild(game);
         return ele;
 }
