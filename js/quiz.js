@@ -6,6 +6,7 @@ const qImg = document.getElementById("qImg");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
+const choiceD = document.getElementById("D");
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
@@ -14,25 +15,33 @@ const scoreDiv = document.getElementById("scoreContainer");
 // create our questions
 let questions = [
     {
-        question : "What does HTML stand for?",
-        imgSrc : "img/html.png",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
+        question : "What building is this?",
+        imgSrc : "pics/serc.jpeg",
+        choiceA : "SERC",
+        choiceB : "Paley Library",
+        choiceC : "Beury",
+        choiceD : "Gladfelter",
         correct : "A"
     },{
-        question : "What does CSS stand for?",
-        imgSrc : "img/css.png",
-        choiceA : "Wrong",
-        choiceB : "Correct",
-        choiceC : "Wrong",
+        question : "What building is this?",
+        imgSrc : "pics/bellTower.jpg",
+        choiceA : "Statue of Liberty",
+        choiceB : "Bell Tower",
+        choiceC : "Hooter Statue",
         correct : "B"
     },{
-        question : "What does JS stand for?",
-        imgSrc : "img/js.png",
-        choiceA : "Wrong",
-        choiceB : "Wrong",
-        choiceC : "Correct",
+        question : "What building is this?",
+        imgSrc : "pics/studentCenter.jpg",
+        choiceA : "Paley Library",
+        choiceB : "Student Center",
+        choiceC : "Charles Library",
+        correct : "B"
+    },{
+        question : "What building is this?",
+        imgSrc : "pics/charles.jpg",
+        choiceA : "Beury",
+        choiceB : "Mauzer",
+        choiceC : "Charles Library",
         correct : "C"
     }
 ];
@@ -57,6 +66,7 @@ function renderQuestion(){
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
 }
 
 start.addEventListener("click",startQuiz);

@@ -61,12 +61,12 @@ body{
     width : 480px;
     position: absolute;
     right : 0;
-    top : 125px;
+    top : 50px;
     padding : 10px
 }
 .choice{
-    display: inline-block;
-    width : 135px;
+    display: table;
+    width : 300px;
     text-align: center;
     border : 1px solid grey;
     border-radius: 5px;
@@ -76,6 +76,7 @@ body{
 .choice:hover{
     border : 2px solid grey;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #timer{
