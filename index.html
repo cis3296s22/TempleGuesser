@@ -22,13 +22,43 @@
       </div> 
 
       <div id="content">
+            <!-- Container for the quiz elements-->
+    <div id="container">
 
+      <div id="quiz" style="display: none">
+
+        <div id="question"></div>
+
+        <div id="qImg"></div>
+
+        <div id="choices">
+
+          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+
+          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+
+          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+
+        </div>
+
+        <div id="timer">
+
+          <div id="counter"></div>
+
+          <div id="btimeGauge"></div>
+
+          <div id="timeGauge"></div>
+
+        </div>
+
+        <div id="progress"></div>
+
+        </div>
+
+      <div id="scoreContainer" style="display: none"></div>
+
+    </div>
       </div>
-
-      <script>
-        "use strict";
-      </script>
-
     <!-- Container for the quiz elements-->
     <div id="container">
 
@@ -75,15 +105,15 @@
       ></script>
 
       <!-- Put all JS files down here-->
-      <script src="js/gameContent.js"></script>
-      <script src="js/longLatContent.js"></script>
-      <script src="js/googlemaps.js"></script>
-      <script src="js/homeContent.js"></script>
-      <script src="js/MakeGame.js"></script>
-      <script src="js/MakeNavRouter_2.js"></script>
+      <!-- <script src="js/gameContent.js"></script> -->
+      <!-- <script src="js/longLatContent.js"></script> -->
+      <!-- <script src="js/googlemaps.js"></script> -->
+      <!-- <script src="js/homeContent.js"></script> -->
+      <!-- <script src="js/MakeGame.js"></script> -->
+      <!-- <script src="js/MakeNavRouter_2.js"></script> -->
 
-      <script>
-        var myNavList = [
+      <!-- <script> -->
+        <!-- var myNavList = [
           {linkText: "Home", linkURL: "#/homeContent", action: homeContent},
           {linkText: "LongLat", linkURL: "#/longLatContent", action: longLatContent},
           {linkText: "Game", linkURL: "#/MakeGame", action: MakeGame}
@@ -93,7 +123,7 @@
                 navList: myNavList, // the list of link objects (linkText, linkURL, actions)
                 contentId: "content", // the id where content is to be injected
                 startLink: "#/homeContent" // routing will set this as the first link. 
-        });
-      </script>
+        }); -->
+      <!-- </script> -->
     </body>
   </html>
