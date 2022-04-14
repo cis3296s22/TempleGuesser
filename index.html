@@ -3,49 +3,61 @@
     <head>
       <title>TempleGuesser</title>
       <meta charset="UTF-8">
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="shortcut icon" href="icons/templeIcon.jpeg" />  
+      <link rel="shortcut icon" href="icons/TempleGuesser.PNG" />  
       
       <!-- Put all css files down here-->
-      <!-- <link href="style/main.css" rel="stylesheet" type="text/css" />   -->
+      <!--<link href="style/main.css" rel="stylesheet" type="text/css" /> -->
       <link rel="stylesheet" href="style/style.css">
       
     </head>
-    <body>
-      <div id="titleNav">
+      <!-- <div id="titleNav">
         <div id="title">Temple Guesser Website</div>
 
         <div id="nav">
 
         </div>
-      </div> 
+      </div>  -->
 
-      <!-- <div id="content"> -->
-            <!-- Container for the quiz elements-->
-            <body>
-              <div id="container">
-                  <div id="start">Start Quiz!</div>
-                  <div id="quiz" style="display: none">
-                      <div id="question"></div>
-                      <div id="qImg"></div>
-                      <div id="choices">
-                          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                          <div class="choice" id="D" onclick="checkAnswer('D')"></div>
-                      </div>
-                      <div id="timer">
-                          <div id="counter"></div>
-                          <div id="btimeGauge"></div>
-                          <div id="timeGauge"></div>
-                      </div>
-                      <div id="progress"></div>
+      <header id="topnav">
+        <div class="inner">
+          <div class="logo"> Temple Guesser Website</div>
+          <nav role='navigation'>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Game</a></li>
+            </ul>
+          </nav>  
+        </div>
+      </header>
+
+      <div id="content">
+        <!-- Container for the quiz elements-->
+        <body>
+          <div id="container">
+              <div id="start">Start Quiz!</div>
+              <div id="quiz" style="display: none">
+                  <div id="question"></div>
+                  <div id="qImg"></div>
+                  <div id="choices">
+                      <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                      <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                      <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                      <div class="choice" id="D" onclick="checkAnswer('D')"></div>
                   </div>
-                  <div id="scoreContainer" style="display: none"></div>
+                  <div id="timer">
+                      <div id="counter"></div>
+                      <div id="btimeGauge"></div>
+                      <div id="timeGauge"></div>
+                  </div>
+                  <div id="progress"></div>
               </div>
-              <script src="js/quiz.js"></script>
-          </body>
+              <div id="scoreContainer" style="display: none"></div>
+          </div>
+          <script src="js/quiz.js"></script>
+      </body>
+      </div>
 
       <div id="map"></div>
       <script
@@ -54,24 +66,23 @@
       ></script>
 
       <!-- Put all JS files down here-->
-      <!-- <script src="js/gameContent.js"></script> -->
-      <!-- <script src="js/longLatContent.js"></script> -->
-      <!-- <script src="js/googlemaps.js"></script> -->
-      <!-- <script src="js/homeContent.js"></script> -->
-      <!-- <script src="js/MakeGame.js"></script> -->
-      <!-- <script src="js/MakeNavRouter_2.js"></script> -->
+      <script src="js/gameContent.js"></script> 
+      <script src="js/longLatContent.js"></script> 
+      <script src="js/googlemaps.js"></script> 
+      <script src="js/homeContent.js"></script> 
+      <script src="js/MakeGame.js"></script> 
+      <script src="js/MakeNavRouter_2.js"></script> 
 
-      <!-- <script> -->
-        <!-- var myNavList = [
-          {linkText: "Home", linkURL: "#/homeContent", action: homeContent},
-          {linkText: "LongLat", linkURL: "#/longLatContent", action: longLatContent},
-          {linkText: "Game", linkURL: "#/MakeGame", action: MakeGame}
-        ];
-        var myNav = MakeNavRouter_2({
-                navId: "nav", // this is where the nav bar will be injected
-                navList: myNavList, // the list of link objects (linkText, linkURL, actions)
-                contentId: "content", // the id where content is to be injected
-                startLink: "#/homeContent" // routing will set this as the first link. 
-        }); -->
-      <!-- </script> -->
+      <script>
+        // var myNavList = [
+        //   {linkText: "Home", linkURL: "#/homeContent", action: homeContent},
+        //   {linkText: "LongLat", linkURL: "#/longLatContent", action: longLatContent}
+        // ];
+        // var myNav = MakeNavRouter_2({
+        //         navId: "nav", // this is where the nav bar will be injected
+        //         navList: myNavList, // the list of link objects (linkText, linkURL, actions)
+        //         contentId: "content", // the id where content is to be injected
+        //         startLink: "#/homeContent" // routing will set this as the first link. 
+        // });
+      </script>
   </html>

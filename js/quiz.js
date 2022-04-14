@@ -25,16 +25,18 @@ let questions = [
     },{
         question : "What building is this?",
         imgSrc : "pics/bellTower.jpg",
-        choiceA : "Statue of Liberty",
+        choiceA : "Gladfelter Monument",
         choiceB : "Bell Tower",
         choiceC : "Hooter Statue",
+        choiceD : "Big Alarm Clock",
         correct : "B"
     },{
         question : "What building is this?",
         imgSrc : "pics/studentCenter.jpg",
         choiceA : "Paley Library",
         choiceB : "Student Center",
-        choiceC : "Charles Library",
+        choiceC : "Galdfelter",
+        choiceD : "Charles Library",
         correct : "B"
     },{
         question : "What building is this?",
@@ -42,6 +44,7 @@ let questions = [
         choiceA : "Beury",
         choiceB : "Mauzer",
         choiceC : "Charles Library",
+        choiceD : "Tuttleman",
         correct : "C"
     }
 ];
@@ -51,7 +54,7 @@ let questions = [
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 10; // 10s
+const questionTime = 1000; // 1000s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
