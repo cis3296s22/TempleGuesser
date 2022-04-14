@@ -1,5 +1,3 @@
-//Code from https://github.com/CodeExplainedRepo/Multiple-Choice-Quiz-JavaScript for easy multiple choice game
-
 // select all elements
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
@@ -17,21 +15,21 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
     {
         question : "What does HTML stand for?",
-        imgSrc : "icons/html.png",
+        imgSrc : "img/html.png",
         choiceA : "Correct",
         choiceB : "Wrong",
         choiceC : "Wrong",
         correct : "A"
     },{
         question : "What does CSS stand for?",
-        imgSrc : "icons/css.png",
+        imgSrc : "img/css.png",
         choiceA : "Wrong",
         choiceB : "Correct",
         choiceC : "Wrong",
         correct : "B"
     },{
         question : "What does JS stand for?",
-        imgSrc : "icons/js.png",
+        imgSrc : "img/js.png",
         choiceA : "Wrong",
         choiceB : "Wrong",
         choiceC : "Correct",
@@ -44,7 +42,7 @@ let questions = [
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 15; // 15s
+const questionTime = 10; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
@@ -144,11 +142,11 @@ function scoreRender(){
     const scorePerCent = Math.round(100 * score/questions.length);
     
     // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "icons/5.png" :
-              (scorePerCent >= 60) ? "icons/4.png" :
-              (scorePerCent >= 40) ? "icons/3.png" :
-              (scorePerCent >= 20) ? "icons/2.png" :
-              "icons/1.png";
+    let img = (scorePerCent >= 80) ? "img/5.png" :
+              (scorePerCent >= 60) ? "img/4.png" :
+              (scorePerCent >= 40) ? "img/3.png" :
+              (scorePerCent >= 20) ? "img/2.png" :
+              "img/1.png";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
