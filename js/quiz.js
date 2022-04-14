@@ -17,21 +17,21 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
     {
         question : "What does HTML stand for?",
-        imgSrc : "img/html.png",
+        imgSrc : "icons/html.png",
         choiceA : "Correct",
         choiceB : "Wrong",
         choiceC : "Wrong",
         correct : "A"
     },{
         question : "What does CSS stand for?",
-        imgSrc : "img/css.png",
+        imgSrc : "icons/css.png",
         choiceA : "Wrong",
         choiceB : "Correct",
         choiceC : "Wrong",
         correct : "B"
     },{
         question : "What does JS stand for?",
-        imgSrc : "img/js.png",
+        imgSrc : "icons/js.png",
         choiceA : "Wrong",
         choiceB : "Wrong",
         choiceC : "Correct",
@@ -144,11 +144,11 @@ function scoreRender(){
     const scorePerCent = Math.round(100 * score/questions.length);
     
     // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "img/5.png" :
-              (scorePerCent >= 60) ? "img/4.png" :
-              (scorePerCent >= 40) ? "img/3.png" :
-              (scorePerCent >= 20) ? "img/2.png" :
-              "img/1.png";
+    let img = (scorePerCent >= 80) ? "icons/5.png" :
+              (scorePerCent >= 60) ? "icons/4.png" :
+              (scorePerCent >= 40) ? "icons/3.png" :
+              (scorePerCent >= 20) ? "icons/2.png" :
+              "icons/1.png";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
