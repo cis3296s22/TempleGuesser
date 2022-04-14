@@ -10,3 +10,4 @@ function longLatContent () {
             ele.innerHTML = content;
             return ele;
     }
+    
