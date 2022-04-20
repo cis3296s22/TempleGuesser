@@ -28,33 +28,32 @@ let questions = [
         choiceA : "Gladfelter Monument",
         choiceB : "Bell Tower",
         choiceC : "Hooter Statue",
-        choiceD : "Big Alarm Clock",
+        choiceD : "Just a Big Clock",
         correct : "B"
     },{
         question : "What building is this?",
         imgSrc : "pics/studentCenter.jpg",
         choiceA : "Paley Library",
         choiceB : "Student Center",
-        choiceC : "Galdfelter",
+        choiceC : "Gladefelter",
         choiceD : "Charles Library",
         correct : "B"
     },{
         question : "What building is this?",
         imgSrc : "pics/charles.jpg",
         choiceA : "Beury",
-        choiceB : "Mauzer",
+        choiceB : "Mazur",
         choiceC : "Charles Library",
         choiceD : "Tuttleman",
         correct : "C"
     }
 ];
 
-// create some variables
-
+// variables
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 1000; // 1000s
+const questionTime = 30; // Edit the time/question here
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
