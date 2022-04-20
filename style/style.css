@@ -1,111 +1,37 @@
-*, *:before, *:after {
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-  }
-
- /* Header Bar Start */
-nav ul {
-    float: right;
-}
-  
-nav li {
-    display: inline;
-    float: left;
-}
-  
-nav a {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    padding: 25px;
-    transition: 0.3s all;
-}
-  
-nav a:hover {
-    background: rgb(255, 0, 0);
-}
-  
-.nameTitle {
-    float: left;
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    line-height: 50px;
-    transition: 0.7s all;
-}
-  
-.alt-header .nameTitle {
-    color: #000;
-}
-  
-body.header-fixed .nameTitle {
-    font-size: 30px;
-}
-  
-.alternate {
-    background: #000;
-    color: #fff;
-}
-  
-section .inner {
-    padding-top: 200px;
-}
-   /* Header Bar End */
-
 body{
     background-size: cover;
-    background-color: #455A71;
+    background-color: #fff;
     margin:0;                   /* no white border around browser window */
     font-size: 20px;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
-#title {
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem; /* spaces out letters a bit */
-    white-space: nowrap;  /* don't allow the title to wrap */
+header {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    height: 45px;
+    border-bottom: 2px solid red;
     text-align: center;
 }
 
-#titleNav {
-    position: fixed; 
-    width: 100%; /* changing to position fixed, you need to add 100% if you want to fill the width */
-  
-    /* the next two rules will layout the title followed by the nav side by side in a row */
-    display:flex; 
-    flex-direction: column;
-    justify-content: space-between; /* flex attribute will push title left and nav right, with "space between" */
-  
-    padding: 1rem;
-    background-color: #455A71;
-  
-    /* give a little "3D"  effect to the edges of titleNav and footer */
-    box-shadow: 0px 0px 5px black;  
+header .title {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 100%;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
-#content {
-    padding: 1rem;
-    padding-top: 8rem; /* make sure fixed titleNav does not cover up any content */
-    padding-bottom: 3rem; /* make sure fixed footer doesn't cover up any content */
-    font-size: 1.15rem;
-    line-height: 2rem; 
-}
-  
-.indent {
-    margin-left: 1.5rem;
-}
-  
-pre {
-    margin-bottom:1.5rem;
-    margin-right: 2rem;
-    margin-left: 1rem;
-    line-height:1.25rem;
-    font-size: 0.95rem;
-  
-    padding:0.5rem;
-    padding-left:0rem;
-    background-color: #455A71; 
-  
-    border-radius: 0.25rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.4);
+#game{
+    width: 100%;
+    max-width: var(--game-max-width);
+    margin: 0 auto;
+    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
 }
 
 #container{
@@ -119,22 +45,23 @@ pre {
 }
 
 #start{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5em;
     font-weight: bolder;
     word-break: normal;
     width:150px;
-    height:200px;
     border : 2px solid lightgrey;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     position: absolute;
     left:280px;
     top:50px;
-    color : lightgrey;
+    color : black;
 }
 
 #start:hover{
-    border: 3px solid #152c44;;
+    border: 3px solid red;;
     color : #152c44;;
 }
 
@@ -152,6 +79,7 @@ pre {
 }
 
 #question{
+    font-family: 'Times New Roman', Times, serif;
     width:500px;
     height : 125px;
     position: absolute;
@@ -201,7 +129,7 @@ pre {
 #counter{ /* Bar & Number Counter */
     font-size: 3em;
     text-align: center;
-    margin-top : 30px;
+    margin-top : 0px;
 }
 
 #btimeGauge{ /* Empty progress bar */
@@ -241,9 +169,8 @@ pre {
 }
 
 #scoreContainer{
-    margin : 20px auto;
-    background-color: white;
-    opacity: 0.8;
+    background-color: #fff;
+    opacity: 1;
     height: 300px;
     width : 700px;
     border-radius: 5px;
@@ -269,60 +196,3 @@ pre {
     font-weight: bold;
     text-align: center;
 }
-
-/*desktop screen*/
-@media only screen and (min-width: 55rem) { 
-
-    /* in desktop the titleNav is not as tall, so less top margin needed to prevent titleNav from hiding top of for content */
-    #content {
-        padding: 1rem;
-        padding-top:4rem; /* make sure fixed titleNav does not cover up any content */
-        padding-bottom: 2rem; /* make sure fixed footer doesn't cover up any content */
-        font-size: 1.15rem;
-        line-height: 2rem; 
-    }
-    #title {
-        font-size: 2.5rem;
-        letter-spacing: 0.2rem; /* spaces out letters a bit */
-        white-space: nowrap;  /* don't allow the title to wrap */
-        text-align: center;
-    }
-    #titleNav {
-        position: fixed; 
-        width: 100%; /* changing to position fixed, you need to add 100% if you want to fill the width */
-  
-        /* the next two rules will layout the title followed by the nav side by side in a row */
-        display:flex; 
-        flex-direction: row;
-        justify-content: space-between; /* flex attribute will push title left and nav right, with "space between" */
-  
-        padding: 1rem;
-        background-color: #222222;
-  
-        /* give a little "3D"  effect to the edges of titleNav and footer */
-        box-shadow: 0px 0px 5px black;  
-    }
-    
-    #content {
-        padding: 1rem;
-        padding-top: 4.5rem; /* make sure fixed titleNav does not cover up any content */
-        padding-bottom: 3rem; /* make sure fixed footer doesn't cover up any content */
-        font-size: 1.15rem;
-        line-height: 2rem; 
-    }
-  
-    pre {
-        margin-bottom:1.5rem;
-        margin-right: 2rem;
-        margin-left: 1rem;
-        line-height:1.25rem;
-        font-size: 0.95rem;
-  
-        padding:0.5rem;
-        padding-left:0rem;
-        background-color: #455A71; 
-  
-        border-radius: 0.25rem;
-        box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.4);
-    }
-  }
