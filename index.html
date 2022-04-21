@@ -1,66 +1,46 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>TempleGuesser</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="shortcut icon" href="icons/templeIcon.jpeg" />  
-      
-      <!-- Put all css files down here-->
-      <link href="style/main.css" rel="stylesheet" type="text/css" />  
-      <link href="style/gameStyle.css" rel="stylesheet" type="text/css" />  
-      
-    </head>
-    <body>
-      <div id="titleNav">
-        <div id="title">Temple Guesser Website</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TempleGuesser</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="icons/TempleGuesser.PNG" />  
+  
+  <!-- Put all css files down here-->
+  <link rel="stylesheet" href="style/style.css">
+  
+</head>
 
-        <div id="nav">
-
-        </div>
-      </div> 
-
-      <div id="content">
-
+<div id="body">
+  <header>
+    <div class="title"> Temple Guesser </div>
+  </header>
+  <div id="container">
+    <div id="start">Start Guessing!</div>
+    <div id="quiz" style="display: none">
+      <div id="question"></div>
+      <div id="qImg"></div>
+      <div id="choices">
+        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+        <div class="choice" id="D" onclick="checkAnswer('D')"></div>
       </div>
-
-      <div id="multiplechoice">
-        <form action="/action_page.php">
-          <p>Please select the correct building</p>
-          <input type="radio" id="serc" name="building" value="SERC">
-          <label for="serc">SERC</label><br>
-          <input type="radio" id="charleslib" name="building" value="CharlesLib">
-          <label for="charelslib">Charles Library</label><br>
-          <input type="radio" id="andersonhall" name="building" value="AndersonHall">
-          <label for="andersonhall">Anderson Hall</label>
-          <input type="submit" value="Submit">
-        </form>
-
+      <div id="timer">
+        <div id="counter"></div>
+        <div id="btimeGauge"></div>
+        <div id="timeGauge"></div>
       </div>
+      <div id="progress"></div>
+    </div>
+    <div id="scoreContainer" style="display: none"></div>
+  </div>
+  <script src="js/quiz.js"></script>
+</div>
 
-      <script>
-        "use strict";
-      </script>
-
-      <!-- Put all JS files down here-->
-      <script src="js/gameContent.js"></script>
-      <script src="js/googlemaps.js"></script>
-      <script src="js/homeContent.js"></script>
-      <script src="js/MakeGame.js"></script>
-      <script src="js/MakeNavRouter_2.js"></script>
-
-      <script>
-        var myNavList = [
-          {linkText: "Home", linkURL: "#/homeContent", action: homeContent},
-          {linkText: "Game", linkURL: "#/gameContent", action: gameContent}
-        ];
-        var myNav = MakeNavRouter_2({
-                navId: "nav", // this is where the nav bar will be injected
-                navList: myNavList, // the list of link objects (linkText, linkURL, actions)
-                contentId: "content", // the id where content is to be injected
-                startLink: "#/homeContent" // routing will set this as the first link. 
-        });
-      </script>
-    </body>
-  </html>
+<div id="map"></div>
+<!-- Put all JS files down here-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYbxmU3Fi8CDGkAU5dmfQT0_kBvzkMWlI&callback=initMap&v=weekly" async ></script>
+<script src="js/googlemaps.js"></script> 
+</html>
