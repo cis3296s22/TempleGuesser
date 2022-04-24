@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TempleGuesser</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/googlemap.js"></script>
-	<style type="text/css">
-		.container {
-			height: 450px;
-		}
-		#map {
-			width: 100%;
-			height: 100%;
-			border: 1px solid blue;
-		}
-	</style>
+  <title>TempleGuesser</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="icons/TempleGuesser.PNG" />  
+  
+  <!-- Put all css files down here-->
+  <link rel="stylesheet" href="style/style.css">
+  
 </head>
-<body>
-	<div class="container">
-		<center><h1>TempleGuesser</h1></center>
-		<div id="map"></div>
-	</div>
-</body>
-<script async defer
-        src="https://maps.googleapis.com/map/api/
-        js?key={AIzaSyDYbxmU3Fi8CDGkAU5dmfQT0_kBvzkMWlI}&callback=initMap">
-        </script>
+
+<div id="body">
+  <header>
+    <div class="title"> Temple Guesser </div>
+  </header>
+  <div id="container">
+    <div id="start">Start Guessing!</div>
+    <div id="quiz" style="display: none">
+      <div id="question"></div>
+      <div id="qImg"></div>
+      <div id="choices">
+        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+        <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+      </div>
+      <div id="timer">
+        <div id="counter"></div>
+        <div id="btimeGauge"></div>
+        <div id="timeGauge"></div>
+      </div>
+      <div id="progress"></div>
+    </div>
+    <div id="scoreContainer" style="display: none"></div>
+  </div>
+  <script src="js/quiz.js"></script>
+</div>
+
+<div id="map"></div>
+<!-- Put all JS files down here-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYbxmU3Fi8CDGkAU5dmfQT0_kBvzkMWlI&callback=initMap&v=weekly" async ></script>
+<script src="js/googlemaps.js"></script> 
 </html>

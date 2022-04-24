@@ -1,7 +1,7 @@
 function initMap() {
-	var temple = {lat: 39.9806, lng: 75.1557};
+	var temple = {lat: 39.9817156290296, lng: -75.15483348376424};
     map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
+      zoom: 18,
       center: temple
     });
 

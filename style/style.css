@@ -1,0 +1,198 @@
+body{
+    background-size: cover;
+    background-color: #fff;
+    margin:0;                   /* no white border around browser window */
+    font-size: 20px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+header {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    height: 45px;
+    border-bottom: 2px solid red;
+    text-align: center;
+}
+
+header .title {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 100%;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+#game{
+    width: 100%;
+    max-width: var(--game-max-width);
+    margin: 0 auto;
+    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
+}
+
+#container{
+    margin : 20px auto;
+    background-color: white;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+
+#start{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: normal;
+    width:150px;
+    border : 2px solid lightgrey;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left:280px;
+    top:50px;
+    color : black;
+}
+
+#start:hover{
+    border: 3px solid red;;
+    color : #152c44;;
+}
+
+#qImg{
+    width : 200px;
+    height : 200px;
+    position: absolute;
+    left : 0px;
+    top : 0px;
+}
+#qImg img{
+    width : 200px;
+    height : 200px;
+    border-top-left-radius: 5px;
+}
+
+#question{
+    font-family: 'Times New Roman', Times, serif;
+    width:500px;
+    height : 125px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+#question p{
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+}
+
+#choices{
+    width : 480px;
+    position: absolute;
+    right : 0;
+    top : 50px;
+    padding : 10px
+}
+
+.choice{
+    display: table;
+    letter-spacing: 0.2rem;
+    width : 300px;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+}
+
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+
+#counter{ /* Bar & Number Counter */
+    font-size: 3em;
+    text-align: center;
+    margin-top : 0px;
+}
+
+#btimeGauge{ /* Empty progress bar */
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-top : 10px;
+    margin-left : 25px;
+}
+
+#timeGauge{ /* Colored progress bar */
+    height : 10px;
+    border-radius: 10px;
+    background-color: rgb(4, 12, 88);
+    margin-top : -10px;
+    margin-left : 25px;
+}
+
+#progress{
+    width : 500px;
+    position: absolute;
+    bottom : 0px;
+    right : 0px;
+    padding:5px;
+    text-align: right;
+}
+
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+
+#scoreContainer{
+    background-color: #fff;
+    opacity: 1;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+}
+
+#scoreContainer img{
+    position: absolute;
+    top:100px;
+    left:325px;
+}
+
+#scoreContainer p{
+    position: absolute;
+    display: block;
+    width : 59px;
+    height :59px;
+    top:130px;
+    left:325px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
